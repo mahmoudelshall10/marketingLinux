@@ -57,7 +57,7 @@ class InstructorRegister extends Controller
     protected function createInstructor()
     {
 
-        $latest_ele = DB::table('users')->latest('created_at')->first();
+        $latest_ele = DB::table('instructors')->latest('created_at')->first();
         $latest_id = $latest_ele->id;
         $latest_id == null  ? 1 : $latest_id + 1 ;
 
